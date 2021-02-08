@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
+from flask_swagger_ui import get_swaggerui_blueprint
+from flask_restful import Api, Resource, fields
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:root1983@localhost/flaskmysql'
@@ -8,6 +10,42 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
+
+api = Api(app)
+
+# class AwesomeAPI(Resource):
+#     def get(self):
+#         '''
+#         Get method represents a GET API method
+#         '''
+#         return {'message': 'My First Awesome API'}
+
+# api.add_resource(AwesomeAPI, '/awesome')
+
+# SWAGGER
+
+class getdata(Resource):
+    def get(self):
+        return {'message': "trabajando"}
+
+class postdata(Resource):
+    def post(self):
+        return {'message': "trabajando"}
+
+class putdata(Resource):
+    def put(self, id):
+        return {'message': id}
+
+class deletedata(Resource):
+    def delete(self, id):
+        return {'message': id}
+
+api.add_resource(getdata, '/get')
+api.add_resource(postdata, '/post')
+api.add_resource(putdata, '/put/<int:id>')
+api.add_resource(deletedata, '/delete/<int:id>')
+
+# API REST
  
 class Task(db.Model):
     id = db.Column(db.Integer, primary_key=True)
