@@ -38,48 +38,36 @@ Este proyecto utiliza las siguientes tecnologías y librerías para funcionar.
 
 El proyecto requiere [Python](https://www.python.org/) v3+ to run.
 
-Instalamos el entorno virtual e iniciamos el servidor.
+Instalamos el entorno virtual en el terminal y lo activamos.
 
 ```sh
-$ cd proyecto
-$ source project1_env/bin/activate
+$ python3 -m venv tutorial-env
+$ source tutorial-env/bin/activate
+```
+
+Instalamos las dependencias del proyecto e iniciamos el servidor.
+
+```sh
+$ pip3 install flask flask-sqlalchemy flask-marshmallow marshmallow-sqlalchemy pymysql flask-swagger-ui
 $ python3 src/app.py
 ```
 
-Para ambiente de producción:
-
-```sh
-$ npm install --production
-$ NODE_ENV=production node app
-```
 ### Desarrollo
 
-Dillinger uses Gulp + Webpack for fast developing.
-Make a change in your file and instantaneously see your updates!
+Para documentar el api rest utilizamos swagger
 
-Open your favorite Terminal and run these commands.
-
-En el terminal ejecutar lo siguiente:
 ```sh
-$ pip3 install flask-sqlalchemy flask-marshmallow marshmallow-sqlalchemy pymysql
+$ pip3 install flask-swagger-ui flask-restful
+$ python3 src/app.py
 ```
 
-#### Building for source
-For production release:
-```sh
-$ gulp build --prod
-```
-Generating pre-built zip archives for distribution:
-```sh
-$ gulp build dist --prod
-```
 License
 ----
 
 MIT
 
 
-**Free Software, Hell Yeah!**
+**Tengo deberes sagrados que cumplir ...**
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
