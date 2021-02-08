@@ -59,20 +59,11 @@ Make a change in your file and instantaneously see your updates!
 
 Open your favorite Terminal and run these commands.
 
-First Tab:
+En el terminal ejecutar lo siguiente:
 ```sh
-$ node app
+$ pip3 install flask-sqlalchemy flask-marshmallow marshmallow-sqlalchemy pymysql
 ```
 
-Second Tab:
-```sh
-$ gulp watch
-```
-
-(optional) Third:
-```sh
-$ karma test
-```
 #### Building for source
 For production release:
 ```sh
