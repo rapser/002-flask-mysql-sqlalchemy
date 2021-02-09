@@ -48,7 +48,7 @@ $ source tutorial-env/bin/activate
 Instalamos las dependencias del proyecto e iniciamos el servidor.
 
 ```sh
-$ pip3 install flask flask-sqlalchemy flask-marshmallow marshmallow-sqlalchemy pymysql flask-swagger-ui
+$ pip3 install flask flask-sqlalchemy flask-marshmallow marshmallow-sqlalchemy pymysql
 $ python3 src/app.py
 ```
 
@@ -57,7 +57,7 @@ $ python3 src/app.py
 Para documentar el api rest utilizamos swagger
 
 ```sh
-$ pip3 install flask-swagger-ui flask-restful
+$ pip3 install flask-restplus
 $ python3 src/app.py
 ```
 
