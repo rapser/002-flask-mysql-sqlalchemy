@@ -41,15 +41,15 @@ El proyecto requiere [Python](https://www.python.org/) v3+ to run.
 Instalamos el entorno virtual en el terminal y lo activamos.
 
 ```sh
-$ python3 -m venv tutorial-env
+$ python -m venv tutorial-env
 $ source tutorial-env/bin/activate
 ```
 
 Instalamos las dependencias del proyecto e iniciamos el servidor.
 
 ```sh
-$ pip3 install flask flask-sqlalchemy flask-marshmallow marshmallow-sqlalchemy pymysql
-$ python3 src/app.py
+$ pip install flask flask-sqlalchemy flask-marshmallow marshmallow-sqlalchemy pymysql
+$ python src/app.py
 ```
 
 ### Desarrollo
@@ -57,8 +57,8 @@ $ python3 src/app.py
 Para documentar el api rest utilizamos swagger
 
 ```sh
-$ pip3 install flask-restplus
-$ python3 src/app.py
+$ pip install flask-restplus
+$ python src/app.py
 ```
 
 License
